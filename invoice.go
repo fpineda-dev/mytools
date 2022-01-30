@@ -25,16 +25,6 @@ type InvoiceLine struct {
 	UnifiedProration bool                         `json:"unified_proration"`
 }
 
-type InvoiceLineDiscountAmount struct {
-	Amount   int64  `json:"amount"`
-	Discount string `json:"discount"`
-}
-
-type Period struct {
-	End   int64 `json:"end"`
-	Start int64 `json:"start"`
-}
-
 type Price struct {
 	Active            bool              `json:"active"`
 	BillingScheme     string            `json:"billing_scheme"`
@@ -60,4 +50,14 @@ type InvoiceTaxAmount struct {
 	Amount    int64  `json:"amount"`
 	Inclusive bool   `json:"inclusive"`
 	TaxRate   string `json:"tax_rate"`
+}
+
+type InvoiceLineDiscountAmount struct {
+	Amount   int64  `json:"amount"`
+	Discount string `json:"discount"`
+}
+
+type Period struct {
+	End   int64 `json:"end"`
+	Start int64 `json:"start"`
 }
